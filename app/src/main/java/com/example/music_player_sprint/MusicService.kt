@@ -27,7 +27,7 @@ class MusicService : Service() {
     }
 
     override fun onBind(intent: Intent): IBinder {
-        TODO("Return the communication channel to the service.")
+        return ServiceBinder()
     }
     public fun play(){
         if(mediaPlayer != null){
@@ -51,11 +51,12 @@ class MusicService : Service() {
         }
     }
 
-    public class ServiceBinder : Binder() {
-        fun getMusivService MusicService(){
-            return MusicService
+    inner fun ServiceBinder : Binder() {
+        fun getMusicService() : MusicService{
+            return this
         }
     }
+
 
 
     private fun showNotificationAndStartForeGround() {
@@ -77,7 +78,7 @@ Create noticiation channel if OS version is greater than or eqaul to Oreo
     fun createChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel =
-                NotificationChannel("CHANNEL_ID", "Nimit", NotificationManager.IMPORTANCE_HIGH)
+                NotificationChannel("CHANNEL_ID", "Song", NotificationManager.IMPORTANCE_HIGH)
             channel.description = "Notifications"
             Objects.requireNonNull(this.getSystemService(NotificationManager::class.java))
                 .createNotificationChannel(channel)
