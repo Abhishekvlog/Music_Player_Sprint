@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="20dp"
+        android:background="@color/black"
+        android:id="@+id/detailImagePoster"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name "
+        android:textColor="@color/black"
+        android:layout_below="@+id/detailImagePoster"
+        android:textSize="18dp"
+        android:layout_marginStart="22dp"
+        android:id="@+id/detailNameOfSong"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist "
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/detailNameOfSong"
+        android:textSize="18dp"
+        android:layout_marginStart="22dp"
+        android:id="@+id/detailartistOfSong"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/play"
+        android:layout_below="@+id/detailartistOfSong"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnPlay"
+        android:layout_marginTop="30dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pause"
+        android:layout_below="@+id/detailartistOfSong"
+        android:layout_alignLeft="@+id/btnPlay"
+        android:id="@+id/btnPause"
+        android:layout_marginStart="-80dp"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete"
+        android:layout_below="@+id/detailartistOfSong"
+        android:layout_alignLeft="@+id/btnPlay"
+        android:id="@+id/btndelete"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"/>
+
+
+
+
+</RelativeLayout>
