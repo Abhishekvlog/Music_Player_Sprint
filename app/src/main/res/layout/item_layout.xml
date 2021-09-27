@@ -29,6 +29,33 @@
         android:textSize="18dp"
         android:layout_marginStart="22dp"
         android:id="@+id/tvartistOfSong"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/play"
+        android:layout_below="@+id/tvartistOfSong"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnPlay"
+       />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pause"
+        android:layout_below="@+id/tvartistOfSong"
+        android:layout_alignLeft="@+id/btnPlay"
+        android:id="@+id/btnPause"
+        android:layout_marginStart="-80dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete"
+        android:layout_below="@+id/tvartistOfSong"
+        android:layout_alignLeft="@+id/btnPlay"
+        android:id="@+id/btndelete"
+        android:layout_marginStart="80dp"
+        />
 
 
 </RelativeLayout>
