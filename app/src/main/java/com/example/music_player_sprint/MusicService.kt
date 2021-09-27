@@ -26,8 +26,8 @@ class MusicService : Service() {
 
     }
 
-    override fun onBind(intent: Intent): IBinder {
-        return ServiceBinder()
+    override fun onBind(p0: Intent?): IBinder? {
+        TODO("Not yet implemented")
     }
     public fun play(){
         if(mediaPlayer != null){
@@ -51,11 +51,11 @@ class MusicService : Service() {
         }
     }
 
-    inner fun ServiceBinder : Binder() {
-        fun getMusicService() : MusicService{
-            return this
-        }
-    }
+//    inner fun ServiceBinder : Binder() {
+//        fun getMusicService() : MusicService{
+//            return this
+//        }
+//    }
 
 
 

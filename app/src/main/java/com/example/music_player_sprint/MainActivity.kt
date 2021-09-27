@@ -15,31 +15,31 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
-    private val serviceConnection : ServiceConnection = object :ServiceConnection{
-        override fun onServiceConnected(p0: ComponentName?, p1: IBinder?) {
-            val getMusicService = p1 as MusicService.ServiceBinder
-            val service = ServiceBinder.getMusicService()
-
-
-
-        }
-
-        override fun onServiceDisconnected(p0: ComponentName?) {
-            TODO("Not yet implemented")
-        }
-
-    }
+//    private val serviceConnection : ServiceConnection = object :ServiceConnection{
+//        override fun onServiceConnected(p0: ComponentName?, p1: IBinder?) {
+//            val getMusicService = p1 as MusicService.ServiceBinder
+//            val service = ServiceBinder.getMusicService()
+//
+//
+//
+//        }
+//
+//        override fun onServiceDisconnected(p0: ComponentName?) {
+//            TODO("Not yet implemented")
+//        }
+//
+//    }
     private var resultsDTO = listOf<ResultsDTO>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         callApi()
-        btnPlay.setOnClickListener {
-            val intent = Intent(MainActivity , MusicService::class.java)
-            ServiceBinder(intent , serviceConnection , Context.BIND_AUTO_CREATE)
-
-
-        }
+//        btnPlay.setOnClickListener {
+//            val intent = Intent(MainActivity , MusicService::class.java)
+//            ServiceBinder(intent , serviceConnection , Context.BIND_AUTO_CREATE)
+//
+//
+//        }
 
     }
 
